@@ -33,8 +33,8 @@ if random_word[4] == single_letter:
 
 if number_of_matching == 0:
     print("No instances of " + single_letter + " found in " + random_word)
-    exit() 
-if number_of_matching == 1:
-    print(str(number_of_matching) + " instance of " + single_letter + " found in " + random_word)
-else: 
-    print(str(number_of_matching) + " instances of " + single_letter + " found in " + random_word)
+else:
+    if number_of_matching == 1:
+        print(str(number_of_matching) + " instance of " + single_letter + " found in " + random_word)
+    else: 
+        print(str(number_of_matching) + " instances of " + single_letter + " found in " + random_word)
