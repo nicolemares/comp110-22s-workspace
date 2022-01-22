@@ -1,6 +1,6 @@
 """EX01 - Chardle - A cute step toward Wordle."""
 
-_author_ = "730391824"
+__author__ = "730391824"
 
 number_of_matching: int = int(0)
 random_word: str = input("Enter a 5-character word: ")
@@ -33,6 +33,8 @@ if random_word[4] == single_letter:
 
 if number_of_matching == 0:
     print("No instances of " + single_letter + " found in " + random_word)
+    exit() 
+if number_of_matching == 1:
+    print(str(number_of_matching) + " instance of " + single_letter + " found in " + random_word)
 else: 
     print(str(number_of_matching) + " instances of " + single_letter + " found in " + random_word)
-
