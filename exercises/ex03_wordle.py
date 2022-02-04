@@ -10,7 +10,7 @@ YELLOW_BOX: str = "\U0001F7E8"
 
 # finding letter in word
 def contains_char(secret: str, letter: str) -> bool:
-    """if second string (letter) is found within first string (word)."""
+    """If second string (letter) is found within first string (word)."""
     assert len(letter) == 1
     i: int = 0
     while i < len(secret):
@@ -22,7 +22,7 @@ def contains_char(secret: str, letter: str) -> bool:
 
 # correct boxes for each letter
 def emojified(word: str, secret: str) -> str:
-    """returning correct color for coreect letter"""
+    """Returning correct color for coreect letter."""
     assert len(word) == len(secret)
     n: int = 0
     box: str = ""
@@ -43,7 +43,7 @@ def emojified(word: str, secret: str) -> str:
 
 # correct amount of letters in guess
 def input_guess(length: int) -> str:
-    """checking to see if guess is correct length"""
+    """Checking to see if guess is correct length."""
     guess: str = str(input("Enter a " + str(length) + " character word: "))
     while len(guess) != length:
         guess = str(input("That wasn't " + str(length) + " chars! Try again: "))
