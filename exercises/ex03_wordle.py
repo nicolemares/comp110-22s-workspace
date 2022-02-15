@@ -55,17 +55,19 @@ def main() -> None:
     """The entrypoint of the program and main game loop."""
     # Your code will go here
     turn: int = 1
-    while turn <= 6:
+    lose: bool = False
+    while turn <= 6 and not lose:
         print(f"=== Turn {turn}/6 ===")
         word = (input_guess(5))
         secret: str = "codes"
         print(emojified(word, secret))
         if word == secret:
             print(f"You won in {turn}/6 turns!")
-            quit()
+            lose = True
         else:
             turn = turn + 1
-    print("X/6 - Sorry, try again tomorrow!")
+    if turn > 6:
+        print("X/6 - Sorry, try again tomorrow!")
 
 
 # converting to module
