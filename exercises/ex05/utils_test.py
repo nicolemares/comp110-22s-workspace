@@ -25,7 +25,7 @@ def test_sub_within_len() -> None:
     given: list[int] = [9, 8, 7, 6, 5, 4, 3]
     start: int = 2
     end: int = 5
-    assert sub(given, start, end) == [7, 4]
+    assert sub(given, start, end) == [7, 6, 5]
 
 
 def test_sub_negtive_start() -> None:
@@ -33,7 +33,7 @@ def test_sub_negtive_start() -> None:
     given: list[int] = [9, 8, 7, 6, 5, 4, 3]
     start: int = -2
     end: int = 4
-    assert sub(given, start, end) == [9, 5]
+    assert sub(given, start, end) == [9, 8, 7, 6]
 
 
 def test_sub_too_high_end() -> None:
@@ -41,7 +41,7 @@ def test_sub_too_high_end() -> None:
     given: list[int] = [9, 8, 7, 6, 5, 4, 3]
     start: int = 2
     end: int = 8
-    assert sub(given, start, end) == [7, 4]
+    assert sub(given, start, end) == [7, 6, 5, 4, 3]
 
 
 def test_sub_empty() -> None:

@@ -17,17 +17,15 @@ def only_evens(given: list[int]) -> list[int]:
 def sub(given: list[int], start: int, end: int) -> list[int]:
     """Fucntion that returns the index indicated (start and end) of list."""
     a_list: list[int] = []
-    if len(given) == 0 or len(given) < start or len(given) >= end:
+    if len(given) == 0 or len(given) < start or end <= 0:
         return a_list
     if start < 0:
-        a_list.append(given[0])
-    else:
-        a_list.append(given[start])
+        start = 0
     if end >= len(given):
-        end = len(given) - 2
-        a_list.append(given[end])
-    else:
-        a_list.append(given[end])
+        end = len(given)
+    while start < end:
+        a_list.append(given[start])
+        start = start + 1
     return a_list
 
 
