@@ -29,7 +29,7 @@ def test_sub_within_len() -> None:
 
 
 def test_sub_negtive_start() -> None:
-    """Test that returns index 0 when start is negative"""
+    """Test that returns index 0 when start is negative."""
     given: list[int] = [9, 8, 7, 6, 5, 4, 3]
     start: int = -2
     end: int = 4
